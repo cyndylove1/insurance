@@ -1,0 +1,27 @@
+:root {
+  --gradient: linear-gradient(
+    to right,
+    rgba(126, 34, 206, 0.7),
+    rgba(49, 46, 129, 0.9),
+    rgba(37, 99, 235, 0.7)
+  );
+}
+
+.main {
+  /* border: 3px solid blue; */
+  width: 100%;
+  background: var(--gradient), url("../src/assets/working.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cta {
+  /* border: 3px solid blue; */
+  height: 400;
+  width: 100%;
+  background: var(--gradient), url("../src/assets/office.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
