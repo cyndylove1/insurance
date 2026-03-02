@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaPhoneAlt } from "react-icons/fa";
 import Button from "../button";
 
 export default function Footer() {
@@ -62,8 +63,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-
-          
           </div>
 
           {/* Services Column */}
@@ -92,21 +91,19 @@ export default function Footer() {
             <p className="text-sm text-gray-900 max-w-lg">
               Start Your Financial Leadership Journey Today
             </p>
-
-            <div className="mt-6 space-y-3">
-              <a
-                href="tel:18004039357"
-                className="block text-sm text-gray-900 transition"
-              >
-                1-800-403-9357
-              </a>
-
-              <a
-                href="tel:14435993748"
-                className="block text-sm text-gray-900 transition"
-              >
-                1-443-599-3748
-              </a>
+            <div className="space-y-8 pt-4">
+              <div className="flex items-start space-x-4">
+                <div className="bg-purple-700 text-white p-3 rounded-xl backdrop-blur-md">
+                  <FaPhoneAlt />
+                </div>
+                <div>
+                  <p className="text-sm uppercase text-purple-700 font-semibold mb-2">
+                    Call Us
+                  </p>
+                  <p className="text-md text-gray-900">1-800-403-9357</p>
+                  <p className="text-md text-gray-900">1-443-599-3748</p>
+                </div>
+              </div>
             </div>
 
             <Link to="/contact">
@@ -120,7 +117,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-300 mt-16 pt-8 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-300 mt-16 pt-8 text-center text-[13px] text-gray-500">
           © 2026 Eagle Leadership Development Inc. All rights reserved.
         </div>
       </div>
