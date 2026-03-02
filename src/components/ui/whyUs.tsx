@@ -7,7 +7,7 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT IMAGE */}
-          <div className="relative">
+          <div className="relative mt-20 lg:mt-0">
             <div className="absolute -top-6 -left-6 w-40 h-40 bg-blue-600 rounded-xl blur-3xl opacity-40 mt-[15rem]"></div>
             <img
               src={whyUs}

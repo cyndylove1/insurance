@@ -89,7 +89,7 @@ export default function Footer() {
               Contact Us
             </h3>
 
-            <p className="text-sm text-gray-900">
+            <p className="text-sm text-gray-900 max-w-lg">
               Start Your Financial Leadership Journey Today
             </p>
 
