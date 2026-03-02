@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import hero from "../assets/focused-employees-working-cafe.png";
 import Button from "./button";
 
@@ -16,11 +17,13 @@ export default function Hero() {
             solutions.
           </p>
           {/* button */}
-          <Button
-            type="button"
-            text="Start Your Journey"
-            className="bg-white text-purple-700 py-3 px-6"
-          />
+          <Link to="/contact">
+            <Button
+              type="button"
+              text="Start Your Journey"
+              className="bg-white text-purple-700 py-3 px-6"
+            />
+          </Link>
         </div>
         {/*hero img */}
         <div className="relative">
