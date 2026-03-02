@@ -4,7 +4,7 @@ import Button from "./button";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative main text-white h-full py-14">
+    <section id="home" className="relative main text-white h-full pt-14">
       <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
         <div className="md:text-5xl text-3xl font-[600] pt-[8rem] lg:pt-0 px-4 md:px-6">
           <h2 className="tracking-tighter">
