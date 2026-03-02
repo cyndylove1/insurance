@@ -10,7 +10,7 @@ export default function About() {
             About Us
           </p>
 
-          <h2 className="text-2xl md:text-4xl font-[500] max-w-lg text-gray-900 leading-tight mb-8">
+          <h2 className="text-xl md:text-4xl font-[500] max-w-lg text-gray-900 leading-tight mb-8">
             Building Strong Foundations for Lasting Wealth
           </h2>
 
@@ -61,7 +61,7 @@ export default function About() {
           <img
             src={about}
             alt="Eagle Leadership Development"
-            className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+            className="relative rounded-3xl shadow-2xl w-full h-full object-cover"
           />
         </div>
       </div>

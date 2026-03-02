@@ -10,10 +10,10 @@ export default function HowItWorks() {
             <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
               How It Works
             </span>
-            <h2 className="mt-4 md:text-4xl text-2xl font[500] text-gray-900">
+            <h2 className="mt-4 md:text-4xl text-xl font[500] text-gray-900">
               A Clear Path to Financial Growth
             </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-gray-600 md:text-md text-sm max-w-2xl mx-auto">
               Our proven step-by-step process ensures clarity, strategy, and
               long-term financial success.
             </p>

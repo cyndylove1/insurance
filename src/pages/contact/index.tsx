@@ -6,9 +6,7 @@ export default function Contact() {
   return (
     <section className="min-h-screen bg-white font-sans overflow-hidden">
       <div className="flex flex-col lg:flex-row min-h-screen">
-        {/* LEFT SIDE: Brand & Info (Purple Wave) */}
-        <div className="relative lg:w-5/12 bg-purple-700 text-white p-4 md:p-10 flex flex-col justify-center overflow-hidden">
-          {/* THE SHARP WAVE (SVG Overlay) */}
+        <div className="relative lg:w-5/12 bg-[linear-gradient(to_right,rgba(126,34,206,0.7),rgba(49,46,129),rgba(37,99,235))] text-white p-4 md:p-10 flex flex-col justify-center overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <svg
               viewBox="0 0 500 800"
@@ -32,25 +30,25 @@ export default function Contact() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
-              Start Your <br />
-              Financial <br />
-              Leadership <br />
+            <h1 className="text-3xl md:text-5xl font-black tracking-tighter">
+              Start Your 
+              Financial 
+              Leadership 
               Journey Today
             </h1>
 
             {/* Contact Info */}
-            <div className="space-y-8 mt-12">
+            <div className="space-y-8 py-12">
               <div className="flex items-start space-x-4">
-                <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md">
+                <div className="bg-white/20 p-3 rounded-xl backdrop-blur-md">
                   <FaPhoneAlt/>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-widest opacity-60 text-white font-bold mb-2">
                     Call Us
                   </p>
-                  <p className="text-xl font-semibold">1-800-403-9357</p>
-                  <p className="text-xl font-semibold">1-443-599-3748</p>
+                  <p className="md:text-xl text-md font-semibold">1-800-403-9357</p>
+                  <p className="md:text-xl text-md font-semibold">1-443-599-3748</p>
                 </div>
               </div>
             </div>
@@ -63,7 +61,7 @@ export default function Contact() {
         {/* RIGHT SIDE: Contact Form */}
         <div className="lg:w-7/12 bg-[#fdfcf0]/30 px-4 py-10 md:p-20 flex flex-col justify-center">
           <div className="max-w-xl w-full mx-auto">
-            <h2 className="text-3xl font-bold text-[#1a0b3d] mb-2">
+            <h2 className="md:text-3xl text-2xl font-bold text-[#1a0b3d] mb-2">
               Request Free Consultation
             </h2>
             <p className="text-gray-500 mb-10">

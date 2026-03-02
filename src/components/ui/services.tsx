@@ -10,11 +10,11 @@ export default function Services() {
             Our Services
           </p>
 
-          <h2 className="md:text-4xl text-2xl font-medium text-gray-900 mt-4">
+          <h2 className="md:text-4xl text-xl font-medium text-gray-900 mt-4">
             Strategic Financial Solutions
           </h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+          <p className="text-gray-600 max-w-2xl md:text-md text-sm mx-auto mt-4">
             Comprehensive services designed to protect, grow, and position your
             financial future for long-term success.
           </p>
@@ -42,7 +42,7 @@ export default function Services() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="md:text-lg text-md font-semibold text-gray-900 mb-3">
                   {service.title}
                 </h3>
 

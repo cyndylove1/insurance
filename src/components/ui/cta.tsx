@@ -15,10 +15,10 @@ export default function CTA() {
           >
             {/* Text */}
             <div className="max-w-xl text-center lg:text-start">
-              <h2 className="md:text-4xl text-2xl font-[500] leading-tight">
+              <h2 className="md:text-4xl text-xl font-[500] leading-tight">
                 Protect What Matters Most
               </h2>
-              <p className="mt-6 text-white/90 text-md font-[400] leading-relaxed">
+              <p className="mt-6 text-white/90 md:text-md text-sm font-[400] leading-relaxed">
                 Get personalized insurance coverage designed to safeguard your
                 family, assets, and future. Speak with a licensed advisor today
                 and gain lasting peace of mind.

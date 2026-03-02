@@ -26,12 +26,12 @@ export default function Hero() {
           </Link>
         </div>
         {/*hero img */}
-        <div className="relative">
+        <div className="relative pt-10 lg:pt-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#4c1d95] via-[#312e81] to-[#1e3a8a] rounded-3xl blur-2xl opacity-20"></div>
           <img
             src={hero}
             alt="Eagle Leadership Development"
-            className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+            className="relative rounded-3xl shadow-2xl w-full h-full md:h-[500px] object-cover"
           />
         </div>
       </div>

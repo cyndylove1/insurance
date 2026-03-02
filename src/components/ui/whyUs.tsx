@@ -22,7 +22,7 @@ export default function WhyUs() {
               Why Choose Us
             </span>
 
-            <h2 className="mt-4 md:text-4xl text-2xl font-[500] text-gray-900 leading-tight">
+            <h2 className="mt-4 md:text-4xl text-xl font-[500] text-gray-900 leading-tight">
               Leadership. Structure. Financial Confidence.
             </h2>
 
@@ -38,7 +38,7 @@ export default function WhyUs() {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-2 rounded-xl bg-gray-100 transition duration-300"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-gray-100 transition duration-300"
                 >
                   <div className="text-blue-600">
                     <IoIosCheckmarkCircle />
@@ -53,7 +53,7 @@ export default function WhyUs() {
         {/* CORE SERVICES SECTION */}
         <div className="py-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-[500] text-gray-900">
+            <h3 className="md:text-3xl text-xl font-[500] text-gray-900">
               Core Services Overview
             </h3>
             <div className="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>

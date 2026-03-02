@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Brand Column */}
           <div>
-            <h2 className="text-2xl font-bold text-purple-700">
+            <h2 className="md:text-2xl text-xl font-bold text-purple-700">
               Eagle Leadership Development Inc
             </h2>
 
@@ -26,12 +26,12 @@ export default function Footer() {
 
           {/* Navigation Column */}
           <div>
-            <h3 className="text-lg font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm text-gray-900">
               <li>
-                <a href="#hero" className="hover:text-purple-700 transition">
+                <a href="#home" className="hover:text-purple-700 transition">
                   Home
                 </a>
               </li>
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-lg font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
               Core Services
             </h3>
 
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h3 className="text-lg font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
               Contact Us
             </h3>
 
