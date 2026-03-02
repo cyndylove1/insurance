@@ -29,37 +29,41 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-purple-700 mb-6">
               Quick Links
             </h3>
-
             <ul className="space-y-3 text-sm text-gray-900">
               <li>
-                <Link to="/" className="hover:text-purple-700 transition">
+                <a href="#hero" className="hover:text-purple-700 transition">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/about" className="hover:text-purple-700 transition">
+                <a href="#about" className="hover:text-purple-700 transition">
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/why-us" className="hover:text-purple-700 transition">
+                <a href="#why-us" className="hover:text-purple-700 transition">
                   Why Us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/services"
+                <a
+                  href="#services"
                   className="hover:text-purple-700 transition"
                 >
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-purple-700 transition">
+                <Link
+                  to="/contact"
+                  className="hover:text-purple-700 transition"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
+
+          
           </div>
 
           {/* Services Column */}
