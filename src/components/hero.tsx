@@ -31,7 +31,7 @@ export default function Hero() {
           <img
             src={hero}
             alt="Eagle Leadership Development"
-            className="relative rounded-3xl shadow-2xl w-full h-full md:h-[500px] object-cover"
+            className="relative shadow-2xl w-full h-full md:h-[500px] object-cover"
           />
         </div>
       </div>
