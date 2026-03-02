@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import Button from "../../components/button";
 import { FaPhoneAlt } from "react-icons/fa";
+import Button from "../../components/button";
+
 
 export default function Contact() {
   return (
@@ -30,7 +31,7 @@ export default function Contact() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-5xl font-black tracking-tighter">
+            <h1 className="text-3xl md:text-5xl font-black tracking-tighter lg:max-w-2xl max-w-md">
               Start Your 
               Financial 
               Leadership 
