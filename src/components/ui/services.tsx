@@ -6,7 +6,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto md:px-6 px-4 py-24">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="uppercase tracking-widest text-purple-600 text-sm font-semibold">
+          <p className="uppercase tracking-widest text-(--primary) text-sm font-semibold">
             Our Services
           </p>
 
@@ -36,7 +36,7 @@ export default function Services() {
                 {/* Icon - Now Centered */}
                 <div
                   className="w-14 h-14 mx-auto flex items-center justify-center 
-                  rounded-full bg-purple-600 text-white text-2xl mb-6"
+                  rounded-full bg-(--primary) text-white text-2xl mb-6"
                 >
                   {Icon && <Icon />}
                 </div>

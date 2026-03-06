@@ -58,16 +58,17 @@ const Navbar: React.FC = () => {
     <>
       {/* NAVBAR */}
       <nav
+        style={scrolled ? { background: "var(--gradient)" } : {}}
         className={`
-          fixed top-0 inset-x-0 z-30
-          flex items-center justify-between
-          px-4 md:px-6 h-14
-          transition-all duration-500
-          ${scrolled ? "bg-white shadow-md" : "bg-white"}
-        `}
+        fixed top-0 inset-x-0 z-30
+        flex items-center justify-between
+        p-4 md:px-6 h-16
+        transition-all duration-500
+        ${scrolled ? "" : "bg-transparent"}
+      `}
       >
         {/* Logo */}
-        <Link to="/" className="text-xl font-semibold text-purple-700">
+        <Link to="/" className="text-xl font-semibold text-white">
           Logo
         </Link>
 
@@ -84,8 +85,8 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`px-5 py-1 rounded-full text-sm font-[500] transition-all duration-300
-                  ${isActive ? "bg-purple-700 text-white" : "text-black hover:text-purple-700"}`}
+                className={`px-5 py-1 rounded-full text-sm font-[600] transition-all duration-300
+                  ${isActive ? "bg-(--secondary) text-white" : "text-white hover:text-purple-700"}`}
               >
                 {link.name}
               </Link>
@@ -93,8 +94,8 @@ const Navbar: React.FC = () => {
               <button
                 key={link.name}
                 onClick={() => handleScrollLink(link.href)}
-                className={`px-5 py-1 rounded-full text-sm font-[500] transition-all duration-300
-                  ${isActive ? "bg-purple-700 text-white" : "text-black hover:text-purple-700"}`}
+                className={`px-5 py-1 rounded-full text-sm font-[600] transition-all duration-300
+                  ${isActive ? "bg-(--secondary) text-white" : "text-white hover:text-purple-700"}`}
               >
                 {link.name}
               </button>
@@ -105,14 +106,19 @@ const Navbar: React.FC = () => {
         {/* Desktop Button */}
         <div className="hidden lg:block">
           <Link to="/contact">
-            <Button className="py-2 px-6 bg-purple-700 text-white" text="Get In Touch" />
+            <Button
+              bgColor="bg-white"
+              textColor="text-(--primary)"
+              iconBg="bg-(--primary)"
+              text="Get In Touch"
+            />
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(true)}
-          className="lg:hidden text-3xl text-black"
+          className="lg:hidden text-3xl text-white"
         >
           <HiMenu />
         </button>
@@ -162,7 +168,7 @@ const Navbar: React.FC = () => {
                   to={link.href}
                   onClick={() => setMenuOpen(false)}
                   className={`text-lg transition-colors duration-300
-            ${isActive ? "text-purple-700 font-semibold" : "text-gray-900 hover:text-purple-700"}`}
+            ${isActive ? "text-(--primary) font-semibold" : "text-gray-900 hover:text-(--primary)"}`}
                 >
                   {link.name}
                 </Link>
@@ -173,7 +179,7 @@ const Navbar: React.FC = () => {
                   key={link.name}
                   onClick={() => handleScrollLink(link.href)}
                   className={`text-lg text-left transition-colors duration-300
-            ${isActive ? "text-purple-700 font-semibold" : "text-gray-900 hover:text-purple-700"}`}
+                ${isActive ? "text-(--primary) font-semibold" : "text-gray-900 hover:text-(--primary)"}`}
                 >
                   {link.name}
                 </button>
@@ -182,7 +188,13 @@ const Navbar: React.FC = () => {
           })}
 
           <Link to="/contact" onClick={() => setMenuOpen(false)}>
-            <Button className="text-white bg-purple-700 w-full py-2" text="Get In Touch" />
+            <Button
+              type="button"
+              bgColor="bg-white"
+              textColor="text-(--primary)"
+              iconBg="bg-(--primary)"
+              text="Get In Touch"
+            />
           </Link>
         </div>
       </div>

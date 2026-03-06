@@ -31,7 +31,9 @@ export default function CTA() {
                 <Button
                   type="button"
                   text="Contact Us"
-                  className="bg-white py-3 px-6 text-purple-700 font-[500]"
+                  bgColor="bg-white"
+                  textColor="text-(--primary)"
+                  iconBg="bg-(--primary)"
                 />
               </Link>
             </div>

@@ -1,15 +1,17 @@
 :root {
   --gradient: linear-gradient(
     to right,
-    rgba(126, 34, 206, 0.7),
-    rgba(49, 46, 129, 0.9),
-    rgba(37, 99, 235, 0.7)
+    rgb(88, 28, 135),
+    rgb(88, 28, 135),
+    rgb(30, 64, 175)
   );
+  --primary: #581c87;
+  --secondary: #1e40af;
 }
 
 .main {
   width: 100%;
-  background: var(--gradient), url("../src/assets/working.jpg");
+  background: var(--gradient);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Brand Column */}
           <div>
-            <h2 className="md:text-2xl text-xl font-bold text-purple-700">
+            <h2 className="md:text-2xl text-xl font-bold text-(--primary)">
               Eagle Leadership Development Inc
             </h2>
 
@@ -27,7 +27,7 @@ export default function Footer() {
 
           {/* Navigation Column */}
           <div>
-            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-(--primary) mb-6">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm text-gray-900">
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-(--primary) mb-6">
               Core Services
             </h3>
 
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h3 className="md:text-lg text-md font-semibold text-purple-700 mb-6">
+            <h3 className="md:text-lg text-md font-semibold text-(--primary) mb-6">
               Contact Us
             </h3>
 
@@ -93,11 +93,11 @@ export default function Footer() {
             </p>
             <div className="space-y-8 pt-4">
               <div className="flex items-start space-x-4">
-                <div className="bg-purple-700 text-white p-3 rounded-xl backdrop-blur-md">
+                <div className="bg-(--primary) text-white p-3 rounded-xl backdrop-blur-md">
                   <FaPhoneAlt />
                 </div>
-                <div>
-                  <p className="text-sm uppercase text-purple-700 font-semibold mb-2">
+                <div className="mb-4">
+                  <p className="text-sm uppercase text-(--primary) font-semibold mb-2">
                     Call Us
                   </p>
                   <p className="text-md text-gray-900">1-800-403-9357</p>
@@ -109,8 +109,10 @@ export default function Footer() {
             <Link to="/contact">
               <Button
                 type="button"
-                text="Request Free Consultation"
-                className="bg-purple-700 text-white mt-4 p-2"
+                bgColor="bg-white"
+                textColor="text-(--primary)"
+                iconBg="bg-(--primary)"
+                text="Consultation"
               />
             </Link>
           </div>
