@@ -10,23 +10,72 @@ import {
   FaTools,
   FaBuilding,
 } from "react-icons/fa";
+import { FaBolt, FaUniversity, FaUsers } from "react-icons/fa";
+import { LuChartPie } from "react-icons/lu";
 
 
-export type NavLinkType = {
-  name: string;
-  href: string;
-  type: "scroll" | "route";
-};
+// hero floating cards
+export const floatingCards = [
+  {
+    id: 1,
+    label: "Wealth Building",
+    icon: FaChartLine,
+    img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=400",
+    pos: "lg:top-10 lg:left-0",
+    delay: 0,
+  },
+  {
+    id: 2,
+    label: "Credit Restoration",
+    icon: FaBolt,
+    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400",
+    pos: "lg:top-40 lg:left-20",
+    delay: 0.2,
+  },
+  {
+    id: 3,
+    label: "Retirement Planning",
+    icon: FaShieldAlt,
+    img: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=400",
+    pos: "lg:top-0 lg:left-72",
+    delay: 0.4,
+  },
+  {
+    id: 4,
+    label: "Business Funding",
+    icon: FaUniversity,
+    img: "https://images.unsplash.com/photo-1674104151261-fdade9ab2466?w=600&auto=format&fit=crop&q=60",
+    pos: "lg:top-24 lg:left-[24rem]",
+    delay: 0.1,
+  },
+  {
+    id: 5,
+    label: "Strategic Planning",
+    icon: LuChartPie,
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400",
+    pos: "lg:top-4 lg:left-[38rem]",
+    delay: 0.3,
+  },
+  {
+    id: 6,
+    label: "Leadership",
+    icon: FaUsers,
+    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400",
+    pos: "lg:top-32 lg:left-[45rem]",
+    delay: 0.5,
+  },
+];
 
-// Add `as const` or type assertion to preserve literal types
-export const navLinks: NavLinkType[] = [
-  { name: "Home", href: "#home", type: "scroll" },
-  { name: "About Us", href: "#about", type: "scroll" },
-  { name: "Why Us", href: "#why-us", type: "scroll" },
-  { name: "Services", href: "#services", type: "scroll" },
-  { name: "How It Works", href: "#how-it-works", type: "scroll" },
-  { name: "Contact", href: "/contact", type: "route" },
-] as const;
+
+// navItems
+export const navItems = [
+  { name: "Home", href: "#hero", id: "hero" },
+  { name: "About", href: "#about", id: "about" },
+  { name: "Why Us", href: "#why-us", id: "why-us" },
+  { name: "Services", href: "#services", id: "services" },
+  { name: "How It Works", href: "#how-it-works", id: "how-it-works" },
+];
+
 
 // why us section
 export const benefits = [
