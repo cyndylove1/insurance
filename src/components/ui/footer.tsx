@@ -32,22 +32,22 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-gray-900">
               <li>
-                <a href="#hero" className="hover:text-[#581c87] transition">
+                <a href="/" className="hover:text-[#581c87] transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#581c87] transition">
+                <a href="/about" className="hover:text-[#581c87] transition">
                   About
                 </a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-[#581c87] transition">
+                <a href="/why-us" className="hover:text-[#581c87] transition">
                   Why Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#581c87] transition">
+                <a href="/services" className="hover:text-[#581c87] transition">
                   Services
                 </a>
               </li>
