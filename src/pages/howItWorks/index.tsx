@@ -1,9 +1,10 @@
-import { ItWorks } from "../constant";
+import { ItWorks } from "../../components/constant";
+import CTA from "../../components/ui/cta";
 
 export default function HowItWorks() {
   return (
     <>
-      <section className="w-full py-24">
+      <section className="w-full pt-[8rem]">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           {/* Section Header */}
           <div className="text-center mb-20">
@@ -54,6 +55,8 @@ export default function HowItWorks() {
           </div>
         </div>
       </section>
+      {/* cta */}
+      <CTA />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { services } from "../../components/constant";
 
 export default function Services() {
   return (
-    <section id="services" className="overflow-hidden bg-gray-100">
+    <section className="overflow-hidden bg-gray-100">
       <div className="max-w-7xl mx-auto md:px-6 px-4 py-24">
         {/* Section Header */}
         <div className="text-center mb-20">

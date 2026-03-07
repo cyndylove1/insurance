@@ -19,7 +19,7 @@ export default function Contact() {
                 <div className="px-2 py-1 rounded bg-white text-[#581c87] transition-colors duration-500">
                   E
                 </div>
-                <h3 className="transition-colors duration-500 hidden sm:block">
+                <h3 className="transition-colors  duration-500 hidden sm:block">
                   EAGLE LEADERSHIP
                 </h3>
               </div>

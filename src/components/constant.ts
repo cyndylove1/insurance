@@ -69,11 +69,11 @@ export const floatingCards = [
 
 // navItems
 export const navItems = [
-  { name: "Home", href: "#hero", id: "hero" },
-  { name: "About", href: "#about", id: "about" },
-  { name: "Why Us", href: "#why-us", id: "why-us" },
-  { name: "Services", href: "#services", id: "services" },
-  { name: "How It Works", href: "#how-it-works", id: "how-it-works" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about"},
+  { name: "Why Us", href: "/why-us"},
+  { name: "Services", href: "/services"},
+  { name: "How It Works", href: "/how-it-works"},
 ];
 
 

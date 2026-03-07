@@ -3,7 +3,7 @@ import whyUs from "../../assets/business-partners-shaking-hands-agreement.png";
 import { benefits, core } from "../../components/constant";
 export default function WhyUs() {
   return (
-    <section id="why-us" className="w-full lg:py-20 ">
+    <section className="w-full lg:py-20 ">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT IMAGE */}

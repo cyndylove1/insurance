@@ -7,7 +7,6 @@ import FloatingImage from "./ui/floatingImage";
 const Hero = () => {
   return (
     <div
-      id="hero"
       className="min-h-screen font-sans text-white overflow-hidden bg-gradient-to-br from-[#581c87] via-[#3a2d9b] to-[#1e40af]"
     >
       {/* Hero Content Section */}
