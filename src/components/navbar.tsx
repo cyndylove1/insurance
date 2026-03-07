@@ -6,8 +6,6 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
-  
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -15,7 +13,7 @@ const Navbar: React.FC = () => {
 
       sections.forEach((section) => {
         if (!section) return;
-        const sectionTop = section.offsetTop - 100; // Offset for navbar height
+        const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
         if (
           window.scrollY >= sectionTop &&
@@ -41,13 +39,13 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-2 font-bold text-xl tracking-tighter shrink-0">
           <div
             className={`px-2 py-1 text-[12px] md:text-[15px] rounded transition-colors duration-500 ${
-              isScrolled ? "bg-(--primary) text-white" : "bg-white text-(--primary)"
+              isScrolled ? "bg-[#581c87] text-white" : "bg-white text-[#581c87]"
             }`}
           >
             E
           </div>
           <h3
-            className={`transition-colors duration-500 hidden sm:block ${
+            className={`transition-colors text-[15px] duration-500 hidden sm:block ${
               isScrolled ? "text-[#581c87]" : "text-white"
             }`}
           >
@@ -58,7 +56,7 @@ const Navbar: React.FC = () => {
         {/* Navigation Links */}
         <div
           className={`hidden lg:flex gap-6 xl:gap-8 text-sm font-medium transition-colors duration-500 ${
-            isScrolled ? "text-(--primary)" : "text-white opacity-90"
+            isScrolled ? "text-[#581c87]" : "text-white"
           }`}
         >
           {navItems.map((item) => (
@@ -66,7 +64,8 @@ const Navbar: React.FC = () => {
               key={item.id}
               href={item.href}
               className={`relative pb-1 transition-all duration-300 hover:opacity-100 ${
-                activeSection === item.id ? "opacity-100" : "opacity-60"
+                /* Removed opacity-60 and replaced with opacity-100 */
+                activeSection === item.id ? "opacity-100" : "opacity-100"
               }`}
             >
               {item.name}
@@ -82,10 +81,8 @@ const Navbar: React.FC = () => {
         {/* CTA Button */}
         <Link to="/contact" className="shrink-0">
           <button
-            className={`px-5 py-1 md:py-2 rounded-full font-bold md:text-sm text-[12px] transition-all duration-500 hover:scale-105 active:scale-95  ${
-              isScrolled
-                ? "bg-(--primary) text-white"
-                : "bg-white text-(--primary)"
+            className={`px-5 py-1 md:py-2 rounded-full font-bold md:text-sm text-[12px] transition-all duration-500 hover:scale-105 active:scale-95 ${
+              isScrolled ? "bg-[#581c87] text-white" : "bg-white text-[#581c87]"
             }`}
           >
             Contact
