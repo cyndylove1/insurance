@@ -25,7 +25,7 @@ const Hero = () => {
       label: "Credit Restoration",
       icon: <Zap size={16} />,
       img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400",
-      pos: "lg:top-40 lg:left-32",
+      pos: "lg:top-40 lg:left-20",
       delay: 0.2,
     },
     {
@@ -33,14 +33,14 @@ const Hero = () => {
       label: "Retirement Planning",
       icon: <ShieldCheck size={16} />,
       img: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=400",
-      pos: "lg:top-0 lg:left-64",
+      pos: "lg:top-0 lg:left-72",
       delay: 0.4,
     },
     {
       id: 4,
       label: "Business Funding",
       icon: <Landmark size={16} />,
-      img: "https://images.unsplash.com/photo-1454165833767-02a698d1316a?auto=format&fit=crop&q=80&w=400",
+      img: "https://images.unsplash.com/photo-1674104151261-fdade9ab2466?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGZ1bmRpbmd8ZW58MHx8MHx8fDA%3D",
       pos: "lg:top-24 lg:left-[24rem]",
       delay: 0.1,
     },
@@ -57,7 +57,7 @@ const Hero = () => {
       label: "Leadership",
       icon: <Users size={16} />,
       img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400",
-      pos: "lg:top-32 lg:left-[50rem]",
+      pos: "lg:top-32 lg:left-[45rem]",
       delay: 0.5,
     },
   ];
@@ -102,9 +102,9 @@ const Hero = () => {
       </section>
 
       {/* Floating Image Grid Section */}
-      <section className="relative w-full flex justify-center pb-12 md:pb-32 px-4">
+      <section className="relative w-full flex justify-center pb-12 md:pb-32 md:pt-10">
         {/* Changed h-[500px] to h-auto on mobile, and kept fixed height only for lg screens */}
-        <div className="flex lg:block overflow-x-auto lg:overflow-visible gap-6 py-6 lg:pb-0 no-scrollbar relative w-full max-w-[1000px] h-auto lg:h-[500px]">
+        <div className="flex lg:block overflow-x-auto lg:overflow-visible gap-6 py-6 lg:pb-0 no-scrollbar relative w-full max-w-[900px] h-auto lg:h-[500px]">
           {floatingCards.map((card, index) => (
             <motion.div
               key={card.id}
