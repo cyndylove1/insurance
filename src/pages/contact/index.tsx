@@ -9,16 +9,21 @@ export default function Contact() {
       <div className="grid md:grid-cols-2 grid-cols-1 min-h-screen">
         <div className="relative main text-white p-4 md:p-10 flex flex-col justify-center overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
-           <Svg/>
+            <Svg />
           </div>
 
           <div className="relative z-10 flex flex-col">
             {/* Logo on top */}
-            <div className="mb-10">
-              <Link to="/" className="text-xl font-bold text-white">
-                Logo
-              </Link>
-            </div>
+            <Link to="/">
+              <div className="flex items-center gap-2 font-bold text-xl tracking-tighter shrink-0 pb-8">
+                <div className="px-2 py-1 rounded bg-white text-[#581c87] transition-colors duration-500">
+                  E
+                </div>
+                <h3 className="transition-colors duration-500 hidden sm:block">
+                  EAGLE LEADERSHIP
+                </h3>
+              </div>
+            </Link>
 
             {/* Heading */}
             <h1 className="text-3xl md:text-5xl font-black tracking-tighter lg:max-w-2xl max-w-md">

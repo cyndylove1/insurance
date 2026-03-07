@@ -1,204 +1,108 @@
 import { useState, useEffect } from "react";
-import { navLinks } from "../components/constant"; // actual array
-import type { NavLinkType } from "../components/constant"; // type only
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { HiMenu, HiX } from "react-icons/hi";
-import Button from "../components/button";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  // Nav Items array to make the code cleaner and easier to maintain
+  const navItems = [
+    { name: "Home", href: "#hero", id: "hero" },
+    { name: "About", href: "#about", id: "about" },
+    { name: "Why Us", href: "#why-us", id: "why-us" },
+    { name: "Services", href: "#services", id: "services" },
+    { name: "How It Works", href: "#how-it-works", id: "how-it-works" },
+  ];
 
-  // Detect scroll and active section
   useEffect(() => {
-    const handleScroll = (): void => {
-      setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      // 1. Handle Background Change
+      setIsScrolled(window.scrollY > 20);
 
-      const sections = document.querySelectorAll<HTMLElement>("section");
-      let current = "home";
+      // 2. Handle Active Section Border logic
+      const sections = navItems.map((item) => document.getElementById(item.id));
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 80;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id") ?? "home";
+        if (!section) return;
+        const sectionTop = section.offsetTop - 100; // Offset for navbar height
+        const sectionHeight = section.offsetHeight;
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          setActiveSection(section.id);
         }
       });
-
-      setActiveSection(current);
     };
 
-    if (location.pathname === "/") {
-      window.addEventListener("scroll", handleScroll);
-    }
-
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
-
-  // Scroll to section
-  const handleScrollLink = (href: string): void => {
-    setMenuOpen(false);
-
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        const section = document.querySelector(href);
-        section?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      const section = document.querySelector(href);
-      section?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  }, []);
 
   return (
-    <>
-      {/* NAVBAR */}
-      <nav
-        style={scrolled ? { background: "var(--gradient)" } : {}}
-        className={`
-        fixed top-0 inset-x-0 z-30
-        flex items-center justify-between
-        p-4 md:px-6 h-16
-        transition-all duration-500
-        ${scrolled ? "" : "bg-transparent"}
-      `}
-      >
+    <nav
+      className={`fixed w-full z-50 transition-all duration-500 px-4 md:px-6 ${
+        isScrolled ? "bg-white py-3 shadow-2xl" : "bg-transparent py-6"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-xl font-semibold text-white">
-          Logo
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-2">
-          {navLinks.map((link: NavLinkType) => {
-            const isRoute = link.type === "route";
-            const sectionId = link.href.replace("#", "");
-            const isActive = isRoute
-              ? location.pathname === link.href
-              : activeSection === sectionId && location.pathname === "/";
-
-            return isRoute ? (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`px-5 py-1 rounded-full text-sm font-[600] transition-all duration-300
-                  ${isActive ? "bg-(--secondary) text-white" : "text-white hover:text-purple-700"}`}
-              >
-                {link.name}
-              </Link>
-            ) : (
-              <button
-                key={link.name}
-                onClick={() => handleScrollLink(link.href)}
-                className={`px-5 py-1 rounded-full text-sm font-[600] transition-all duration-300
-                  ${isActive ? "bg-(--secondary) text-white" : "text-white hover:text-purple-700"}`}
-              >
-                {link.name}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Desktop Button */}
-        <div className="hidden lg:block">
-          <Link to="/contact">
-            <Button
-              bgColor="bg-white"
-              textColor="text-(--primary)"
-              iconBg="bg-(--primary)"
-              text="Get In Touch"
-            />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="lg:hidden text-3xl text-white"
-        >
-          <HiMenu />
-        </button>
-      </nav>
-
-      {/* Overlay */}
-      {menuOpen && (
-        <div
-          onClick={() => setMenuOpen(false)}
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-        />
-      )}
-
-      {/* Mobile Slide Menu */}
-      <div
-        className={`
-          fixed top-0 right-0 h-full w-72 bg-white z-50 lg:hidden
-          transform transition-transform duration-500 ease-in-out
-          ${menuOpen ? "translate-x-0" : "translate-x-full"}
-          flex flex-col
-        `}
-      >
-        {/* Close Button */}
-        <div className="flex justify-end p-4">
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="text-gray-900 text-3xl"
+        <div className="flex items-center gap-2 font-bold text-xl tracking-tighter shrink-0">
+          <div
+            className={`px-2 py-1 rounded transition-colors duration-500 ${
+              isScrolled ? "bg-[#581c87] text-white" : "bg-white text-[#581c87]"
+            }`}
           >
-            <HiX />
+            E
+          </div>
+          <h3
+            className={`transition-colors duration-500 hidden sm:block ${
+              isScrolled ? "text-[#581c87]" : "text-white"
+            }`}
+          >
+            EAGLE LEADERSHIP
+          </h3>
+        </div>
+
+        {/* Dynamic Navigation Links */}
+        <div
+          className={`hidden lg:flex gap-6 xl:gap-8 text-sm font-medium transition-colors duration-500 ${
+            isScrolled ? "text-[#581c87]" : "text-white opacity-90"
+          }`}
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={item.href}
+              className={`relative pb-1 transition-all duration-300 hover:opacity-100 ${
+                activeSection === item.id ? "opacity-100" : "opacity-60"
+              }`}
+            >
+              {item.name}
+              {/* Animated Border Underline */}
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] bg-current transition-all duration-300 ${
+                  activeSection === item.id ? "w-full" : "w-0"
+                }`}
+              />
+            </a>
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <Link to="/contact" className="shrink-0">
+          <button
+            className={`px-5 py-2 rounded-full font-bold text-sm transition-all duration-500 hover:scale-105 active:scale-95  ${
+              isScrolled
+                ? "bg-[#581c87] text-white"
+                : "bg-white text-[#581c87]"
+            }`}
+          >
+            Contact
           </button>
-        </div>
-
-        {/* Mobile Links */}
-        <div className="flex flex-col gap-6 px-6 mt-10">
-          {navLinks.map((link: NavLinkType) => {
-            const isRoute = link.type === "route";
-            const sectionId = link.href.replace("#", "");
-
-            const isActive = isRoute
-              ? location.pathname === link.href
-              : activeSection === sectionId && location.pathname === "/";
-
-            if (isRoute) {
-              return (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-lg transition-colors duration-300
-            ${isActive ? "text-(--primary) font-semibold" : "text-gray-900 hover:text-(--primary)"}`}
-                >
-                  {link.name}
-                </Link>
-              );
-            } else {
-              return (
-                <button
-                  key={link.name}
-                  onClick={() => handleScrollLink(link.href)}
-                  className={`text-lg text-left transition-colors duration-300
-                ${isActive ? "text-(--primary) font-semibold" : "text-gray-900 hover:text-(--primary)"}`}
-                >
-                  {link.name}
-                </button>
-              );
-            }
-          })}
-
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>
-            <Button
-              type="button"
-              bgColor="bg-white"
-              textColor="text-(--primary)"
-              iconBg="bg-(--primary)"
-              text="Get In Touch"
-            />
-          </Link>
-        </div>
+        </Link>
       </div>
-    </>
+    </nav>
   );
 };
 

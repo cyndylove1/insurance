@@ -1,5 +1,3 @@
-import Button from "./button";
-
 export default function Form() {
   return (
     <div className="bg-gray-100 px-4 py-10 md:p-20 flex flex-col justify-center">
@@ -46,15 +44,11 @@ export default function Form() {
             ></textarea>
           </div>
           {/* button */}
-
-          <Button
-            type="submit"
-            bgColor="bg-white"
-            textColor="text-(--primary)"
-            iconBg="bg-(--primary)"
-            text="Send Request"
-            className="w-full flex items-center justify-center"
-          />
+          <div>
+            <button className="px-10 py-4 rounded-full hover:scale-105 active:scale-95  font-bold w-full text-md transition-all duration-500 text-white bg-[#581c87]">
+              Contact
+            </button>
+          </div>
         </form>
       </div>
     </div>

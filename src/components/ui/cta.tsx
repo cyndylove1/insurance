@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "../button";
 
 export default function CTA() {
   return (
@@ -26,17 +25,11 @@ export default function CTA() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
-                <Button
-                  type="button"
-                  text="Contact Us"
-                  bgColor="bg-white"
-                  textColor="text-(--primary)"
-                  iconBg="bg-(--primary)"
-                />
-              </Link>
-            </div>
+            <Link to="/contact">
+              <button className="px-10 py-2 rounded-full font-bold text-sm transition-all duration-500 bg-white text-[#581c87] hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
+                Contact
+              </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,9 +1,9 @@
 :root {
   --gradient: linear-gradient(
     to right,
+    #581c87,
     rgb(88, 28, 135),
-    rgb(88, 28, 135),
-    rgb(30, 64, 175)
+    #1e40af
   );
   --primary: #581c87;
   --secondary: #1e40af;

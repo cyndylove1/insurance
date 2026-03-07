@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
-import Button from "../button";
+
 
 export default function Footer() {
   return (
@@ -32,33 +32,27 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-gray-900">
               <li>
-                <a href="#home" className="hover:text-purple-700 transition">
+                <a href="#hero" className="hover:text-[#581c87] transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-purple-700 transition">
+                <a href="#about" className="hover:text-[#581c87] transition">
                   About
                 </a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-purple-700 transition">
+                <a href="#why-us" className="hover:text-[#581c87] transition">
                   Why Us
                 </a>
               </li>
               <li>
-                <a
-                  href="#services"
-                  className="hover:text-purple-700 transition"
-                >
+                <a href="#services" className="hover:text-[#581c87] transition">
                   Services
                 </a>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-purple-700 transition"
-                >
+                <Link to="/contact" className="hover:text-[#581c87] transition">
                   Contact
                 </Link>
               </li>
@@ -105,16 +99,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
-            <Link to="/contact">
-              <Button
-                type="button"
-                bgColor="bg-white"
-                textColor="text-(--primary)"
-                iconBg="bg-(--primary)"
-                text="Consultation"
-              />
-            </Link>
           </div>
         </div>
 
